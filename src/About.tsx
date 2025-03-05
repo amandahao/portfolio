@@ -1,10 +1,12 @@
 import "./App.css";
 import React from "react";
 import SocMed from "./components/SocMed";
+import Header from "./components/Header";
 
 const AboutPage: React.FC = () => {
   return (
     <div className="background">
+      <Header />
       <div className="max-w-3xl mx-auto text-center">
         <h1 className="title text-white">ABOUT</h1>
 
@@ -26,7 +28,7 @@ const AboutPage: React.FC = () => {
             Since I was little, I imagined myself a software engineer, but after
             exposure to product management and the amazing people in the
             industry, I knew it was something I wanted to do for a long time. I
-            love how <b>people-oriented</b> the field is, and how it offers a
+            love how <b>people-oriented</b> the field is, and how it offers a{" "}
             <b>welcoming space to constantly learn new things and grow</b>{" "}
             alongside peers and mentors.
           </p>
