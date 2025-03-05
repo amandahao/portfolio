@@ -1,6 +1,6 @@
-import { useState } from "react";
 import "./App.css";
 import SplineScene from "./components/SplineScene";
+import SocMed from "./components/SocMed";
 
 function App() {
   return (
@@ -34,34 +34,7 @@ function App() {
             components to learn more about me!
           </span>
           <div style={{ padding: "25px 0px 0px 0px" }}>
-            <div className="socmed">
-              <a href="https://www.linkedin.com/in/amandahao/">
-                <img
-                  src="/src/assets/linkedin.png"
-                  alt="linkedin"
-                  width="35"
-                  height="35"
-                />
-              </a>
-            </div>
-            <div className="socmed">
-              <img
-                src="/src/assets/resume.png"
-                alt="resume"
-                width="35"
-                height="35"
-              />
-            </div>
-            <div className="socmed">
-              <a href="mailto:amandahao@gmail.com">
-                <img
-                  src="/src/assets/email.png"
-                  alt="resume"
-                  width="35"
-                  height="35"
-                />
-              </a>
-            </div>
+            <SocMed />
           </div>
         </main>
       </div>
