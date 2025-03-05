@@ -30,8 +30,8 @@ function App() {
             className="desc"
             style={{ color: "#ffffffcc", padding: "60px 0px 0px 0px" }}
           >
-            Click on the computer to check out my work, or hover over other
-            components to learn more about me!
+            Click on the computer to check out my work, or hover over <br />
+            other components to learn more about me!
           </span>
           <div style={{ padding: "25px 0px 0px 0px" }}>
             <SocMed />

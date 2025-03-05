@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap");
+@import "tailwindcss";
 
 .app {
   display: flex;
@@ -40,4 +41,29 @@
   font-size: 16px;
   font-family: "Reddit Sans", sans-serif;
   font-weight: 500;
+}
+
+.background {
+  background: linear-gradient(180deg, #040719 0%, #04064b 50%, #8f3e6b 99.99%);
+}
+
+.title {
+  font-size: 66px;
+  font-family: "Pixelify Sans", sans-serif;
+  font-weight: 400;
+  color: "#ffffff";
+  padding: 40px;
+}
+
+.text {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "Reddit Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.text a {
+  text-decoration: none;
 }
