@@ -8,13 +8,16 @@ const Header: React.FC = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="top-0 left-0 w-full bg-transparent z-50 text-white">
+    <header
+      className="top-0 left-0 w-full bg-transparent z-50 tab"
+      style={{ paddingTop: "10px" }}
+    >
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <nav className="hidden md:flex space-x-6">
+        <nav className="hidden md:flex space-x-10">
           <Link
             to="/"
             className={`hover:text-blue-300 transition-colors ${
-              isActive("/") ? "font-bold" : ""
+              isActive("/") ? "active-tab" : ""
             }`}
           >
             HOME
@@ -22,7 +25,7 @@ const Header: React.FC = () => {
           <Link
             to="/about"
             className={`hover:text-blue-300 transition-colors ${
-              isActive("/about") ? "font-bold" : ""
+              isActive("/about") ? "active-tab" : ""
             }`}
           >
             ABOUT
@@ -30,7 +33,7 @@ const Header: React.FC = () => {
           <Link
             to="/work"
             className={`hover:text-blue-300 transition-colors ${
-              isActive("/work") ? "font-bold" : ""
+              isActive("/work") ? "active-tab" : ""
             }`}
           >
             MY WORK

@@ -77,3 +77,17 @@
   font-weight: 600;
   line-height: normal;
 }
+
+.tab {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Reddit Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.active-tab {
+  color: #fff;
+  font-weight: 700;
+}
