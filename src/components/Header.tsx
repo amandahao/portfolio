@@ -8,7 +8,7 @@ const Header: React.FC = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-transparent z-50 text-white">
+    <header className="top-0 left-0 w-full bg-transparent z-50 text-white">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <nav className="hidden md:flex space-x-6">
           <Link
@@ -38,7 +38,7 @@ const Header: React.FC = () => {
         </nav>
 
         {/* Mobile Menu Toggle */}
-        <div className="md:hidden ml-auto">
+        {/* <div className="md:hidden ml-auto">
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="focus:outline-none"
@@ -75,10 +75,10 @@ const Header: React.FC = () => {
               </svg>
             )}
           </button>
-        </div>
+        </div> */}
 
         {/* Mobile Menu Dropdown */}
-        {isOpen && (
+        {/* {isOpen && (
           <div className="absolute top-full left-0 w-full bg-indigo-900 md:hidden">
             <nav className="flex flex-col items-center py-4 space-y-4">
               <Link
@@ -110,7 +110,7 @@ const Header: React.FC = () => {
               </Link>
             </nav>
           </div>
-        )}
+        )} */}
       </div>
     </header>
   );
