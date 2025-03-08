@@ -15,8 +15,8 @@ const AboutPage: React.FC = () => {
             Hi, I'm Amanda Hao, a current third-year student at Georgetown
             University studying Science, Technology & International Affairs
             (STIA), with a minor in Computer Science. I'm also in my first year
-            pursuing an accelerated Master's in Data Science & Analytics (DSAN).
-            Growing up in the Bay Area, California, I've always been{" "}
+            of pursuing an accelerated Master's in Data Science & Analytics
+            (DSAN). Growing up in the Bay Area, California, I've always been{" "}
             <b>
               fascinated with the dynamic and rapidly evolving field of
               technology

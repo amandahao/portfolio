@@ -10,7 +10,7 @@ const Header: React.FC = () => {
   return (
     <header
       className="top-0 left-0 w-full bg-transparent z-50 tab"
-      style={{ paddingTop: "10px" }}
+      style={{ paddingTop: "12px" }}
     >
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <nav className="hidden md:flex space-x-10">
