@@ -1,5 +1,6 @@
 import "./App.css";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import SocMed from "./components/SocMed";
 import Header from "./components/Header";
 
@@ -12,12 +13,36 @@ interface ProjectData {
   tags: string[];
 }
 
-const ProjectCard: React.FC<ProjectData> = ({
+const getTagColor = (tagName: string): { bg: string; text: string } => {
+  const tagColors: Record<string, { bg: string; text: string }> = {
+    // Design tools
+    Figma: { bg: "bg-pink-200", text: "text-pink-800" },
+    "UX Design": { bg: "bg-orange-200", text: "text-orange-800" },
+    Prototyping: { bg: "bg-green-200", text: "text-green-800" },
+    "UX Research": { bg: "bg-purple-200", text: "text-purple-800" },
+
+    // Development tools
+    Jira: { bg: "bg-blue-200", text: "text-blue-800" },
+    Confluence: { bg: "bg-indigo-200", text: "text-indigo-800" },
+
+    // Analytics
+    Amplitude: { bg: "bg-red-200", text: "text-red-800" },
+    "A/B Testing": { bg: "bg-yellow-200", text: "text-yellow-800" },
+
+    // Strategy
+    "Product Strategy": { bg: "bg-teal-200", text: "text-teal-800" },
+  };
+
+  return tagColors[tagName] || { bg: "bg-gray-200", text: "text-gray-800" };
+};
+
+const ProjectCard: React.FC<ProjectData & { onClick: () => void }> = ({
   company,
   logo,
   description,
   imageSrc,
   tags,
+  onClick,
 }) => {
   return (
     <div
@@ -26,8 +51,10 @@ const ProjectCard: React.FC<ProjectData> = ({
         backgroundColor: "#F3F3F3",
         boxShadow: "0px 0px 53.5px 24px rgba(255, 255, 255, 0.25)",
       }}
+      onClick={onClick}
     >
       <div className="flex flex-col md:flex-row p-8">
+        {/* p-8 a bit too big imo, change smaller to mimic figma design */}
         <div className="md:w-1/2 pr-0 md:pr-8 mb-6 md:mb-0">
           <div className="flex items-center mb-4">
             <img
@@ -41,23 +68,17 @@ const ProjectCard: React.FC<ProjectData> = ({
           </div>
           <p className="mb-6 text-left project-desc">{description}</p>
           <div className="flex flex-wrap gap-2">
-            {tags.map((tag, index) => (
-              // map tags to colors based on value, not index
-              <span
-                key={index}
-                className={`rounded-full px-3 py-1 text-sm ${
-                  index % 4 === 0
-                    ? "bg-pink-200"
-                    : index % 4 === 1
-                    ? "bg-green-200"
-                    : index % 4 === 2
-                    ? "bg-orange-200"
-                    : "bg-purple-200"
-                }`}
-              >
-                {tag}
-              </span>
-            ))}
+            {tags.map((tag, index) => {
+              const { bg, text } = getTagColor(tag);
+              return (
+                <span
+                  key={index}
+                  className={`rounded-full px-3 py-1 text-sm ${bg} ${text}`}
+                >
+                  {tag}
+                </span>
+              );
+            })}
           </div>
         </div>
         <div className="md:w-1/2">
@@ -74,6 +95,8 @@ const ProjectCard: React.FC<ProjectData> = ({
 };
 
 const WorkPage: React.FC = () => {
+  const navigate = useNavigate();
+
   const projects: ProjectData[] = [
     {
       id: "nba",
@@ -85,7 +108,7 @@ const WorkPage: React.FC = () => {
       tags: ["Amplitude", "Jira", "Confluence", "Product Strategy"],
     },
     {
-      id: "washington-post",
+      id: "wapo",
       company: "The Washington Post",
       logo: "/src/assets/wapo/wapo.png",
       description:
@@ -104,6 +127,10 @@ const WorkPage: React.FC = () => {
     },
   ];
 
+  const handleProjectClick = (projectId: string) => {
+    navigate(`/work/${projectId}`);
+  };
+
   return (
     <div className="background">
       <Header />
@@ -112,7 +139,11 @@ const WorkPage: React.FC = () => {
 
         <div className="max-w-5xl mx-auto">
           {projects.map((project) => (
-            <ProjectCard key={project.id} {...project} />
+            <ProjectCard
+              key={project.id}
+              {...project}
+              onClick={() => handleProjectClick(project.id)}
+            />
           ))}
         </div>
 
