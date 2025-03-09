@@ -59,28 +59,6 @@ const ProjectDetail: React.FC = () => {
   const [passwordError, setPasswordError] = useState(false);
 
   const projectsData: Record<string, ProjectDetailData> = {
-    wapo: {
-      id: "wapo",
-      company: "The Washington Post",
-      logo: "/src/assets/wapo/wapo.png",
-      role: "Product Management intern",
-      timeline: "Jan - May 2024 (10 weeks)",
-      team: [
-        "Meredith Thoms (Manager)",
-        "Zoe Wang",
-        "Humza Husain",
-        "Anish Goel",
-        "Sneha Selveraj",
-      ],
-      tags: ["Figma", "Prototyping", "UX Research", "A/B Testing"],
-      headerImage: "/src/assets/wapo/header-image.png",
-      problem:
-        "Placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text.",
-      passwordProtected: {
-        isProtected: true,
-        password: "wapo2024",
-      },
-    },
     nba: {
       id: "nba",
       company: "National Basketball Association",
@@ -107,7 +85,29 @@ const ProjectDetail: React.FC = () => {
       ],
       passwordProtected: {
         isProtected: true,
-        password: "nba2024",
+        password: import.meta.env.VITE_PORTF_PW || "",
+      },
+    },
+    wapo: {
+      id: "wapo",
+      company: "The Washington Post",
+      logo: "/src/assets/wapo/wapo.png",
+      role: "Product Management intern",
+      timeline: "Jan - May 2024 (10 weeks)",
+      team: [
+        "Meredith Thoms (Manager)",
+        "Zoe Wang",
+        "Humza Husain",
+        "Anish Goel",
+        "Sneha Selveraj",
+      ],
+      tags: ["Figma", "Prototyping", "UX Research", "A/B Testing"],
+      headerImage: "/src/assets/wapo/header-image.png",
+      problem:
+        "Placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text.",
+      passwordProtected: {
+        isProtected: true,
+        password: import.meta.env.VITE_PORTF_PW || "",
       },
     },
     venmo: {
