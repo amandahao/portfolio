@@ -147,16 +147,12 @@ const WorkPage: React.FC = () => {
           ))}
         </div>
 
-        <div className="flex justify-center space-x-4 mt-8">
+        <div className="flex justify-center space-x-4 mt-12">
           <SocMed />
-          <div
-            className="mt-4 text-sm opacity-75 text-white"
-            style={{
-              position: "absolute",
-            }}
-          >
-            © 2025 Amanda Hao
-          </div>
+        </div>
+
+        <div className="text-center text-sm text-white mt-4 pb-4">
+          © 2025 Amanda Hao
         </div>
       </div>
     </div>

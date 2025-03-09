@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import Header from "./components/Header";
 import SocMed from "./components/SocMed";
 
-// Define interfaces for our data
 interface PasswordProtectedContent {
   isProtected: boolean;
   password: string;
@@ -60,7 +58,6 @@ const ProjectDetail: React.FC = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
 
-  // Project data based on the images provided
   const projectsData: Record<string, ProjectDetailData> = {
     wapo: {
       id: "wapo",
@@ -241,7 +238,7 @@ const ProjectDetail: React.FC = () => {
               {project.whatIDid && (
                 <div className="mb-6">
                   <h2 className="text-2xl font-bold mb-2">
-                    What I did this summer
+                    What I did this summer ☀️
                   </h2>
                   <p className="mb-2">{project.whatIDid}</p>
                   {project.focusAreas && project.focusAreas.length > 0 && (
@@ -570,11 +567,11 @@ const ProjectDetail: React.FC = () => {
           )}
         </div>
 
-        <div className="flex justify-center space-x-4 mt-12 pb-8">
+        <div className="flex justify-center space-x-4 mt-12">
           <SocMed />
         </div>
 
-        <div className="text-center text-sm text-gray-500 mt-4">
+        <div className="text-center text-sm text-white mt-4 pb-4">
           © 2025 Amanda Hao
         </div>
       </div>
