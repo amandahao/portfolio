@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Footer from "./components/Footer";
+import ReactGoogleSlides from "react-google-slides";
 
 interface PasswordProtectedContent {
   isProtected: boolean;
@@ -175,7 +176,7 @@ const ProjectDetail: React.FC = () => {
           </svg>
         </button>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto p-wrapper">
           <div className="mb-8 flex items-center">
             <img
               src={project.logo}
@@ -312,9 +313,16 @@ const ProjectDetail: React.FC = () => {
                   <h2 className="text-2xl font-bold mb-2">
                     Purchase CVR Insights
                   </h2>
-                  <div className="text-sm text-gray-500 mb-4">July 2024</div>
 
-                  <h3 className="text-xl font-bold mb-2">
+                  <ReactGoogleSlides
+                    width={"100%"}
+                    height={540}
+                    slidesLink="https://docs.google.com/presentation/d/1uOZA9FcLAvTM2JHDzB-0og2cFAjaOyZUi1mHf15Aslw"
+                    position={1}
+                    showControls
+                  />
+
+                  <h3 className="text-xl font-bold mb-2 mt-8">
                     Tl;dr: Seasonal Insights Informing Product Strategy
                   </h3>
                   <p className="mb-4">
@@ -322,19 +330,21 @@ const ProjectDetail: React.FC = () => {
                     increase packages page CTR and CVR across{" "}
                     <strong>all platforms</strong>, as we see an all-time high
                     of <strong>47% of web users initiating a purchase</strong>{" "}
-                    (vs 5% but low purchase intent (7.58% confirmed purchases).
-                    It's worthy to note on 2/15, Nike x NBA ID hosted a
-                    promotion on Jayson Tatum sneakers, tied to receiving a free
-                    year of Premium.
+                    on 2/15 but low purchase intent (7.58% confirmed purchases).{" "}
+                    <mark style={{ backgroundColor: "#E6E6E6" }}>
+                      It's worthy to note on 2/15, Nike x NBA ID hosted a
+                      promotion on Jayson Tatum sneakers, tied to receiving a
+                      free year of Premium.
+                    </mark>
                   </p>
                   <p className="mb-4">
                     The opportunity to push Premium SKUs during this time period
                     also remains high.{" "}
                     <strong>2/15 is the only peak date</strong> where a Premium
                     package is the most bought SKU across platforms, accounting
-                    for 15.3% of total purchases compared to other first place
+                    for 15.55% of total purchases compared to other first place
                     SKUs on different dates only accounting for 3-5%. Between
-                    the four main packages of BLPPUSMO, BLPUS, BLPEUSMO, and
+                    the four main packages of BLPPUSMO, BLPPUS, BLPEUSMO, and
                     BLPEUS,{" "}
                     <strong>
                       94.8% of purchases on 2/15 were Premium SKUs
@@ -346,11 +356,11 @@ const ProjectDetail: React.FC = () => {
                     similar or more than SoS on desktop web and mobile web
                     respectively), but{" "}
                     <strong>drop off is a huge concern</strong> (especially for
-                    guest users and authenticated users through the purchase
-                    initiate and payment page steps). While only 19.4%
-                    authenticated users drop off after the purchase initiate
-                    step on web, <strong>51.3% of guest users drop off</strong>{" "}
-                    at the same step, highlighting the{" "}
+                    guest users and between the purchase initiate and payment
+                    page steps). While only 19.4% authenticated users drop off
+                    after the purchase initiate step on web,{" "}
+                    <strong>51.3% of guest users drop off</strong> at the same
+                    step, highlighting the{" "}
                     <strong>
                       need to streamline the account creation flow
                     </strong>
@@ -374,9 +384,9 @@ const ProjectDetail: React.FC = () => {
                       Android users predominantly skew international
                     </strong>{" "}
                     (64.3% of ANDR users vs. 45.8% of iOS users) and have a
-                    higher purchase initiate drop-off rate (84.7% vs. 70.9% of
-                    iOS users vs 79.4% of global Android users, the largest
-                    number of users live in PH, AUS, BRA, MEX, and IND.
+                    higher purchase initiate drop-off rate (84.7% of ANDR users
+                    vs 59.4% of iOS users). Out of global Android users, the
+                    largest number of users live in PH, AUS, BRA, MEX, and IND.
                     Considering these user demographics, English proficiency,
                     platform clarity, and package descriptions can be
                     influential factors behind the generally lower overall CVR
@@ -388,7 +398,7 @@ const ProjectDetail: React.FC = () => {
               {project.impactOutcomes && project.impactOutcomes.length > 0 && (
                 <div className="mb-8">
                   <h2 className="text-2xl font-bold mb-4">Impact & outcomes</h2>
-                  <ul className="list-disc pl-5 space-y-2">
+                  <ul className="list-disc pl-5">
                     {project.impactOutcomes.map((outcome, index) => (
                       <li key={index}>{outcome}</li>
                     ))}

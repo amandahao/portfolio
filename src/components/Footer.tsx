@@ -49,7 +49,7 @@ export default function Footer({ theme = "light" }: FooterProps) {
       </div>
       {/* change text-black later to a lighter grey */}
       <div
-        className={`text-center text-sm ${
+        className={`text-center text-xs ${
           theme === "light" ? "text-white" : "text-black"
         } mt-4 pb-4`}
       >
