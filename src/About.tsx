@@ -1,6 +1,6 @@
 import "./App.css";
 import React from "react";
-import SocMed from "./components/SocMed";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 
 const AboutPage: React.FC = () => {
@@ -72,17 +72,7 @@ const AboutPage: React.FC = () => {
           </p>
         </div>
 
-        <div className="flex justify-center space-x-4 mt-8">
-          <SocMed />
-          <div
-            className="mt-4 text-sm opacity-75 text-white"
-            style={{
-              position: "absolute",
-            }}
-          >
-            © 2025 Amanda Hao
-          </div>
-        </div>
+        <Footer />
       </div>
     </div>
   );

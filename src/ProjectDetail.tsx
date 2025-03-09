@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import SocMed from "./components/SocMed";
+import Footer from "./components/Footer";
 
 interface PasswordProtectedContent {
   isProtected: boolean;
@@ -567,13 +567,7 @@ const ProjectDetail: React.FC = () => {
           )}
         </div>
 
-        <div className="flex justify-center space-x-4 mt-12">
-          <SocMed />
-        </div>
-
-        <div className="text-center text-sm text-white mt-4 pb-4">
-          © 2025 Amanda Hao
-        </div>
+        <Footer theme="dark" />
       </div>
     </div>
   );

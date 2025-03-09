@@ -1,7 +1,7 @@
 import "./App.css";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import SocMed from "./components/SocMed";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 
 interface ProjectData {
@@ -147,13 +147,7 @@ const WorkPage: React.FC = () => {
           ))}
         </div>
 
-        <div className="flex justify-center space-x-4 mt-12">
-          <SocMed />
-        </div>
-
-        <div className="text-center text-sm text-white mt-4 pb-4">
-          © 2025 Amanda Hao
-        </div>
+        <Footer />
       </div>
     </div>
   );
