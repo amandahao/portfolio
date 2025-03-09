@@ -67,7 +67,7 @@ const ProjectDetail: React.FC = () => {
       timeline: "June - Aug 2024 (10 weeks)",
       team: ["Chelsea Landon & Alaina Browne (Managers)"],
       tags: ["Amplitude", "Jira", "Confluence", "Product Strategy"],
-      headerImage: "/src/assets/nba/header-images.png",
+      headerImage: "/src/assets/nba/nba-hero.png",
       whatIDid:
         "My overarching goal for my internship was to optimize user purchase experience and standardize subscription flows across platforms, looking particularly at how season tentpoles change user behavior.",
       focusAreas: [
@@ -102,7 +102,7 @@ const ProjectDetail: React.FC = () => {
         "Sneha Selveraj",
       ],
       tags: ["Figma", "Prototyping", "UX Research", "A/B Testing"],
-      headerImage: "/src/assets/wapo/header-image.png",
+      headerImage: "/src/assets/wapo/wapo-hero.png",
       problem:
         "Placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text.",
       passwordProtected: {
@@ -114,11 +114,11 @@ const ProjectDetail: React.FC = () => {
       id: "venmo",
       company: "Venmo",
       logo: "/src/assets/venmo/venmo.png",
-      role: "Personal project (not affiliated with Venmo)",
+      role: "Personal project",
       timeline: "",
       team: [],
       tags: ["Figma", "Prototyping", "UX Design"],
-      headerImage: "/src/assets/venmo/header-image.png",
+      headerImage: "/src/assets/venmo/venmoe-hero.png",
       problem:
         "Many Venmo users, especially college students, struggle to manage their finances effectively when using the app. This often leads to overspending and difficulty tracking expenses, impacting their financial well-being and user satisfaction.",
       approach:

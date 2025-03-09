@@ -86,7 +86,7 @@ const ProjectCard: React.FC<ProjectData & { onClick: () => void }> = ({
             src={imageSrc}
             alt={`${company} project screenshot`}
             className="w-full rounded-xl object-cover"
-            style={{ maxHeight: "13.5rem", backgroundPosition: "bottom" }}
+            style={{ height: "13.5rem", backgroundPosition: "bottom" }}
           />
         </div>
       </div>
@@ -104,7 +104,7 @@ const WorkPage: React.FC = () => {
       logo: "/src/assets/nba/nba.png",
       description:
         "Increase purchase conversion and user retention for NBA League Pass.",
-      imageSrc: "/src/assets/nba/gamedetail.png",
+      imageSrc: "/src/assets/nba/nba-hero.png",
       tags: ["Amplitude", "Jira", "Confluence", "Product Strategy"],
     },
     {
@@ -113,7 +113,7 @@ const WorkPage: React.FC = () => {
       logo: "/src/assets/wapo/wapo.png",
       description:
         "Designed nine innovative features to attract and engage Gen Z readers to The Post during the 2024 election season.",
-      imageSrc: "/images/wapo-project.png",
+      imageSrc: "/src/assets/wapo/wapo-hero.png",
       tags: ["Figma", "Prototyping", "UX Research", "A/B Testing"],
     },
     {
@@ -122,7 +122,7 @@ const WorkPage: React.FC = () => {
       logo: "/src/assets/venmo/venmo.png",
       description:
         "Prototyped a budgeting feature within the app that allows users to set spending limits, categorize transactions, and view spending patterns.",
-      imageSrc: "/images/venmo-project.png",
+      imageSrc: "/src/assets/venmo/venmo-hero.png",
       tags: ["Figma", "Prototyping", "UX Design", "Product Strategy"],
     },
   ];
