@@ -1,10 +1,7 @@
-import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const Header: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
-
   const isActive = (path: string) => location.pathname === path;
 
   return (

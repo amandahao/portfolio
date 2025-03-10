@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Footer from "./components/Footer";
-import ReactGoogleSlides from "react-google-slides";
 
 interface PasswordProtectedContent {
   isProtected: boolean;
@@ -315,12 +314,10 @@ const ProjectDetail: React.FC = () => {
                     Purchase CVR Insights
                   </h2>
 
-                  <ReactGoogleSlides
-                    width={"100%"}
-                    height={540}
-                    slidesLink="https://docs.google.com/presentation/d/1uOZA9FcLAvTM2JHDzB-0og2cFAjaOyZUi1mHf15Aslw"
-                    position={1}
-                    showControls
+                  <iframe
+                    src="https://docs.google.com/presentation/d/e/2PACX-1vTiyF4mF1J1qV7HRSncZ-NGd4p_J8_rbjl5EhNvtfqO73YyqoxL9uvzmwtNxAVxkCr215vt-XxeYeyF/embed?start=false&loop=false&delayms=3000"
+                    width="100%"
+                    height="540"
                   />
 
                   <h3 className="text-xl font-bold mb-2 mt-8">
