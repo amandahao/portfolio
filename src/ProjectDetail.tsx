@@ -63,12 +63,12 @@ const ProjectDetail: React.FC = () => {
     nba: {
       id: "nba",
       company: "National Basketball Association",
-      logo: "/src/assets/nba/nba.png",
+      logo: "/assets/nba/nba.png",
       role: "Products, Tech & Ops intern",
       timeline: "June - Aug 2024 (10 weeks)",
       team: ["Chelsea Landon & Alaina Browne (Managers)"],
       tags: ["Amplitude", "Jira", "Confluence", "Product Strategy"],
-      headerImage: "/src/assets/nba/nba-hero.png",
+      headerImage: "/assets/nba/nba-hero.png",
       whatIDid:
         "My overarching goal for my internship was to optimize user purchase experience and standardize subscription flows across platforms, looking particularly at how season tentpoles change user behavior.",
       focusAreas: [
@@ -92,7 +92,7 @@ const ProjectDetail: React.FC = () => {
     wapo: {
       id: "wapo",
       company: "The Washington Post",
-      logo: "/src/assets/wapo/wapo.png",
+      logo: "/assets/wapo/wapo.png",
       role: "Product Management intern",
       timeline: "Jan - May 2024 (10 weeks)",
       team: [
@@ -103,7 +103,7 @@ const ProjectDetail: React.FC = () => {
         "Sneha Selveraj",
       ],
       tags: ["Figma", "Prototyping", "UX Research", "A/B Testing"],
-      headerImage: "/src/assets/wapo/wapo-hero.png",
+      headerImage: "/assets/wapo/wapo-hero.png",
       mission:
         "The project aims to develop and implement a targeted strategy to attract and engage Gen Z readership to The Washington Post during the 2024 election season. Leveraging digital platforms, innovative content formats, and interactive campaigns, the project seeks to establish The Post as a relevant and trusted paid source of elections news and information for this audience.",
       passwordProtected: {
@@ -114,12 +114,12 @@ const ProjectDetail: React.FC = () => {
     venmo: {
       id: "venmo",
       company: "Venmo",
-      logo: "/src/assets/venmo/venmo.png",
+      logo: "/assets/venmo/venmo.png",
       role: "Personal project",
       timeline: "",
       team: [],
       tags: ["Figma", "Prototyping", "UX Design"],
-      headerImage: "/src/assets/venmo/venmo-hero.png",
+      headerImage: "/assets/venmo/venmo-hero.png",
       problem:
         "Many Venmo users, especially college students, struggle to manage their finances effectively when using the app. This often leads to overspending and difficulty tracking expenses, impacting their financial well-being and user satisfaction.",
       approach:
@@ -610,12 +610,12 @@ const ProjectDetail: React.FC = () => {
                       </div>
                       <div className="md:w-1/2 flex justify-center">
                         <img
-                          src="/src/assets/wapo/cards.gif"
+                          src="/assets/wapo/cards.gif"
                           className="w-1/2 self-center"
                           style={{ maxHeight: 400, width: "auto" }}
                         />
                         <img
-                          src="/src/assets/wapo/articles.gif"
+                          src="/assets/wapo/articles.gif"
                           className="w-1/2 self-center"
                           style={{ maxHeight: 400, width: "auto" }}
                         />
@@ -648,7 +648,7 @@ const ProjectDetail: React.FC = () => {
                       </div>
                       <div className="md:w-1/2 flex justify-center">
                         <img
-                          src="/src/assets/wapo/ert.png"
+                          src="/assets/wapo/ert.png"
                           className="w-1/2 self-center"
                           style={{ maxHeight: 300, width: "auto" }}
                         />
@@ -685,12 +685,12 @@ const ProjectDetail: React.FC = () => {
                     </div>
                     <div className="md:w-1/2 flex justify-center">
                       <img
-                        src="/src/assets/wapo/completion.gif"
+                        src="/assets/wapo/completion.gif"
                         className="w-1/2 self-center"
                         style={{ maxHeight: 100, width: "auto" }}
                       />
                       <img
-                        src="/src/assets/wapo/progress-bar.png"
+                        src="/assets/wapo/progress-bar.png"
                         className="w-1/2 self-center"
                         style={{ maxHeight: 400, width: "auto" }}
                       />
@@ -728,7 +728,7 @@ const ProjectDetail: React.FC = () => {
                     </div>
                     <div className="md:w-1/2 flex justify-center">
                       <img
-                        src="/src/assets/wapo/tldr.png"
+                        src="/assets/wapo/tldr.png"
                         className="w-1/2 self-center"
                         style={{ maxHeight: 300, width: "auto" }}
                       />
@@ -761,7 +761,7 @@ const ProjectDetail: React.FC = () => {
                     </div>
                     <div className="md:w-1/2 flex justify-center">
                       <img
-                        src="/src/assets/wapo/map.gif"
+                        src="/assets/wapo/map.gif"
                         className="w-1/2 self-center"
                         style={{ maxHeight: 300, width: "auto" }}
                       />

@@ -12,14 +12,14 @@ interface FooterProps {
 export default function Footer({ theme = "light" }: FooterProps) {
   const getImageSrc = (image: string) =>
     theme === "light"
-      ? `/src/assets/${image}-white.png`
-      : `/src/assets/${image}-black.png`;
+      ? `/assets/${image}-white.png`
+      : `/assets/${image}-black.png`;
 
   return (
     <div>
       <div className="flex justify-center space-x-4 mt-12">
         <div style={socmed}>
-          <a href="https://www.linkedin.com/in/amandahao/">
+          <a target="_blank" href="https://www.linkedin.com/in/amandahao/">
             <img
               src={getImageSrc("linkedin")}
               alt="linkedin"
@@ -29,15 +29,20 @@ export default function Footer({ theme = "light" }: FooterProps) {
           </a>
         </div>
         <div style={socmed}>
-          <img
-            src={getImageSrc("resume")}
-            alt="resume"
-            width="35"
-            height="35"
-          />
+          <a
+            target="_blank"
+            href="https://drive.google.com/file/d/1IySIHm8MfS021QnPjOGs7pbmFawubafH/view?usp=drive_link"
+          >
+            <img
+              src={getImageSrc("resume")}
+              alt="resume"
+              width="35"
+              height="35"
+            />
+          </a>
         </div>
         <div style={{ ...socmed, marginRight: "0px" }}>
-          <a href="mailto:amandahao@gmail.com">
+          <a target="_blank" href="mailto:amandahao@gmail.com">
             <img
               src={getImageSrc("email")}
               alt="email"

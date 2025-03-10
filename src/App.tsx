@@ -6,7 +6,10 @@ function App() {
   return (
     <>
       <SplineScene />
-      <div className="app h-screen flex items-center justify-center">
+      <div
+        className="app h-screen flex items-center justify-center"
+        // style={{ pointerEvents: "none" }}
+      >
         <main>
           <span className="caption" style={{ color: "#ffffffc9" }}>
             Hi, I'm{" "}

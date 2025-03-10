@@ -101,28 +101,28 @@ const WorkPage: React.FC = () => {
     {
       id: "nba",
       company: "National Basketball Association",
-      logo: "/src/assets/nba/nba.png",
+      logo: "/assets/nba/nba.png",
       description:
         "Increase purchase conversion and user retention for NBA League Pass.",
-      imageSrc: "/src/assets/nba/nba-hero.png",
+      imageSrc: "/assets/nba/nba-hero.png",
       tags: ["Amplitude", "Jira", "Confluence", "Product Strategy"],
     },
     {
       id: "wapo",
       company: "The Washington Post",
-      logo: "/src/assets/wapo/wapo.png",
+      logo: "/assets/wapo/wapo.png",
       description:
         "Designed nine innovative features to attract and engage Gen Z readers to The Post during the 2024 election season.",
-      imageSrc: "/src/assets/wapo/wapo-hero.png",
+      imageSrc: "/assets/wapo/wapo-hero.png",
       tags: ["Figma", "Prototyping", "UX Research", "A/B Testing"],
     },
     {
       id: "venmo",
       company: "Venmo",
-      logo: "/src/assets/venmo/venmo.png",
+      logo: "/assets/venmo/venmo.png",
       description:
         "Prototyped a budgeting feature within the app that allows users to set spending limits, categorize transactions, and view spending patterns.",
-      imageSrc: "/src/assets/venmo/venmo-hero.png",
+      imageSrc: "/assets/venmo/venmo-hero.png",
       tags: ["Figma", "Prototyping", "UX Design", "Product Strategy"],
     },
   ];
