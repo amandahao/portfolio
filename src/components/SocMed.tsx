@@ -1,4 +1,7 @@
 import CSS from "csstype";
+import linkedin from "../assets/linkedin-white.png";
+import resume from "../assets/resume-white.png";
+import email from "../assets/email-white.png";
 
 const socmed: CSS.Properties = {
   float: "left",
@@ -10,30 +13,15 @@ export default function SocMed() {
     <div>
       <div style={socmed}>
         <a href="https://www.linkedin.com/in/amandahao/">
-          <img
-            src="/src/assets/linkedin-white.png"
-            alt="linkedin"
-            width="35"
-            height="35"
-          />
+          <img src={linkedin} alt="linkedin" width="35" height="35" />
         </a>
       </div>
       <div style={socmed}>
-        <img
-          src="/src/assets/resume-white.png"
-          alt="resume"
-          width="35"
-          height="35"
-        />
+        <img src={resume} alt="resume" width="35" height="35" />
       </div>
       <div style={{ ...socmed, marginRight: "0px" }}>
         <a href="mailto:amandahao@gmail.com">
-          <img
-            src="/src/assets/email-white.png"
-            alt="resume"
-            width="35"
-            height="35"
-          />
+          <img src={email} alt="resume" width="35" height="35" />
         </a>
       </div>
     </div>
