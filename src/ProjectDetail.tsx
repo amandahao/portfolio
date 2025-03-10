@@ -18,6 +18,7 @@ interface ProjectDetailData {
   tags: string[];
   headerImage: string;
   problem?: string;
+  mission?: string;
   approach?: string;
   whatIDid?: string;
   focusAreas?: string[];
@@ -104,8 +105,8 @@ const ProjectDetail: React.FC = () => {
       ],
       tags: ["Figma", "Prototyping", "UX Research", "A/B Testing"],
       headerImage: "/src/assets/wapo/wapo-hero.png",
-      problem:
-        "Placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text.",
+      mission:
+        "The project aims to develop and implement a targeted strategy to attract and engage Gen Z readership to The Washington Post during the 2024 election season. Leveraging digital platforms, innovative content formats, and interactive campaigns, the project seeks to establish The Post as a relevant and trusted paid source of elections news and information for this audience.",
       passwordProtected: {
         isProtected: true,
         password: import.meta.env.VITE_PORTF_PW || "",
@@ -411,10 +412,10 @@ const ProjectDetail: React.FC = () => {
           {/* Washington Post specific content */}
           {projectId === "wapo" && (
             <>
-              {project.problem && (
+              {project.mission && (
                 <div className="mb-8">
-                  <h2 className="text-2xl font-bold mb-2">Problem</h2>
-                  <p>{project.problem}</p>
+                  <h2 className="text-2xl font-bold mb-2">Mission</h2>
+                  <p>{project.mission}</p>
                 </div>
               )}
 
@@ -477,13 +478,315 @@ const ProjectDetail: React.FC = () => {
                 </div>
               ) : (
                 <div>
-                  {/* Content that would be shown after password authentication */}
-                  <div className="bg-gray-200 p-6 rounded-xl mb-8">
-                    <p className="text-gray-600 italic">
-                      Detailed case study content would be displayed here after
-                      authentication.
+                  <div className="mb-8">
+                    <h2 className="text-2xl font-bold mb-2">Problem</h2>
+                    <p>
+                      Gen Z individuals have limited attention spans, especially
+                      towards hard news. They do not have time to find the
+                      content that is most relevant to them.
                     </p>
+
+                    <h3 className="text-xl font-bold mb-2 mt-2">
+                      User Interview Insights
+                    </h3>
+                    <ul className="list-disc pl-5">
+                      <li>
+                        Only 25% of users have a news-specific app on their
+                        phone and none pay for news.
+                      </li>
+                      <li>
+                        Most users stay updated with news through social media:
+                        Instagram, Reddit, Tiktok, etc.
+                      </li>
+                      <li>
+                        Average time spent consuming news in total per day: 15
+                        minutes.
+                      </li>
+                      <li>
+                        Written articles and social media (posts, stories, short
+                        videos) are the preferred formats for news consumption.
+                      </li>
+                    </ul>
+
+                    <h3 className="text-xl font-bold mb-2 mt-2">
+                      Pain Point Rationale
+                    </h3>
+                    <ol className="list-decimal pl-5">
+                      <li>
+                        <b>Time</b>
+                      </li>
+                      <ul className="pl-5" style={{ listStyleType: "circle" }}>
+                        <li>
+                          Gen Z expects <b>rapid information</b> delivery and
+                          efficient communication.
+                        </li>
+                        <li>
+                          Gen Z views social media as the{" "}
+                          <b>primary channel for politics</b>, thanks to its
+                          quick, engaging format.
+                        </li>
+                        <li>
+                          Gen Z views print newspapers as the{" "}
+                          <b>most reliable source</b>, but social media's
+                          convenience leads to higher usage.
+                        </li>
+                      </ul>
+                      <li>
+                        <b>Personalization</b>
+                      </li>
+                      <ul className="pl-5" style={{ listStyleType: "circle" }}>
+                        <li>
+                          Gen Z expects a <b>high degree of personalization</b>{" "}
+                          when it comes to media they consume.
+                        </li>
+                        <li>
+                          Being <b>subscriber-centric</b> and relevant is key to
+                          increasing customer lifetime value.
+                        </li>
+                        <li>
+                          Generic news feeds are overwhelming for Gen Z, who
+                          have a <b>short attention span</b> for reading
+                          irrelevant content.
+                        </li>
+                      </ul>
+                      <li>
+                        <b>Engagement</b>
+                      </li>
+                      <ul className="pl-5" style={{ listStyleType: "circle" }}>
+                        <li>
+                          Gen Z seeks <b>instant communication</b> and
+                          collaboration with friends, family, and peers.
+                        </li>
+                        <li>
+                          Gen Z strives for rewarding intellectual pursuits to
+                          challenge them to think critically.
+                        </li>
+                        <li>
+                          Gen Z wants <b>interactive experiences</b> that go
+                          beyond passive consumption.
+                        </li>
+                      </ul>
+                    </ol>
+                    <h2 className="text-2xl font-bold mb-2 mt-8">
+                      Feature Ideation
+                    </h2>
+                    <p className="mb-2">
+                      Check out the features in the embedded Figma prototype.
+                      Selected features are explained in greater detail below.
+                    </p>
+                    <iframe
+                      style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }}
+                      width="100%"
+                      height="700"
+                      src="https://embed.figma.com/proto/K7QkPkGcCFaVcRWQXFjXK7/my-wapo?page-id=0%3A1&node-id=1-2&viewport=603%2C342%2C0.39&scaling=scale-down&content-scaling=fixed&starting-point-node-id=60%3A534&embed-host=share&footer=false"
+                      allowFullScreen
+                    ></iframe>
+                    <div className="flex flex-col md:flex-row mt-6">
+                      <div className="md:w-1/2">
+                        <h3 className="text-xl font-bold mb-2">
+                          Cards/Bite Size News
+                        </h3>
+                        <ul className="list-disc pl-5 leading-relaxed">
+                          <li className="mb-2">
+                            Understand <b>key takeaways</b> from news articles
+                            and election information.
+                          </li>
+                          <li className="mb-2">
+                            <b>Convenient access</b> to more information about a
+                            topic of interest.
+                          </li>
+                          <li className="mb-2">
+                            <b>100% of interviewees</b> would use this feature.{" "}
+                          </li>
+                          <li className="mb-2">
+                            "I like how this is{" "}
+                            <b>similar to swiping on social media</b> and
+                            provides <b>quick bullet points</b> for me to read."
+                          </li>
+                          <li>
+                            <b>Potential iteration:</b> make cards more similar
+                            to social media posts (e.g. vertical scroll) as
+                            users have already shown a preference for this
+                            format.
+                          </li>
+                        </ul>
+                      </div>
+                      <div className="md:w-1/2 flex justify-center">
+                        <img
+                          src="/src/assets/wapo/cards.gif"
+                          className="w-1/2 self-center"
+                          style={{ maxHeight: 400, width: "auto" }}
+                        />
+                        <img
+                          src="/src/assets/wapo/articles.gif"
+                          className="w-1/2 self-center"
+                          style={{ maxHeight: 400, width: "auto" }}
+                        />
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col md:flex-row mt-6">
+                      <div className="md:w-1/2">
+                        <h3 className="text-xl font-bold mb-2">
+                          Est. Reading Time
+                        </h3>
+                        <ul className="list-disc pl-5 leading-relaxed">
+                          <li className="mb-2">
+                            Estimates amount of time it would take to read an
+                            article based on word count.
+                          </li>
+                          <li className="mb-2">
+                            <b>100% of interviewees</b> would use this feature.
+                          </li>
+                          <li className="mb-2">
+                            "I feel like this is a feature{" "}
+                            <b>every news app should have</b>/already has."
+                          </li>
+                          <li>
+                            <b>Potential iteration:</b> calculating estimated
+                            reading time based on users' reading speed.
+                            Implement test article in onboarding.
+                          </li>
+                        </ul>
+                      </div>
+                      <div className="md:w-1/2 flex justify-center">
+                        <img
+                          src="/src/assets/wapo/ert.png"
+                          className="w-1/2 self-center"
+                          style={{ maxHeight: 300, width: "auto" }}
+                        />
+                      </div>
+                    </div>
                   </div>
+
+                  <div className="flex flex-col md:flex-row mt-6">
+                    <div className="md:w-1/2">
+                      <h3 className="text-xl font-bold mb-2">
+                        Progress Bar/Completion Animation
+                      </h3>
+                      <ul className="list-disc pl-5 leading-relaxed">
+                        <li className="mb-2">
+                          <b>100% of interviewees</b> would use this feature.
+                        </li>
+                        <li className="mb-2">
+                          “I like knowing where I am while reading an article
+                          and how much I have left to read.”
+                        </li>
+                        <li className="mb-2">
+                          Users felt feature provides a{" "}
+                          <b>sense of accomplishment</b> that motivated them to{" "}
+                          <b>read more articles</b>.
+                        </li>
+                        <li className="mb-2">
+                          Return to home button <b>improved UX navigation</b>.
+                        </li>
+                        <li>
+                          <b>Potential iteration:</b> mark articles as completed
+                          similar to iBooks.
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="md:w-1/2 flex justify-center">
+                      <img
+                        src="/src/assets/wapo/completion.gif"
+                        className="w-1/2 self-center"
+                        style={{ maxHeight: 100, width: "auto" }}
+                      />
+                      <img
+                        src="/src/assets/wapo/progress-bar.png"
+                        className="w-1/2 self-center"
+                        style={{ maxHeight: 400, width: "auto" }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col md:flex-row mt-6">
+                    <div className="md:w-1/2">
+                      <h3 className="text-xl font-bold mb-2">TL;DR</h3>
+                      <ul className="list-disc pl-5 leading-relaxed">
+                        <li className="mb-2">
+                          <b>100% of interviewees</b> would use this feature.
+                        </li>
+                        <li className="mb-2">
+                          "If this feature existed,{" "}
+                          <b>I would definitely skip to it</b> if I felt the
+                          article was too long."
+                        </li>
+                        <li className="mb-2">
+                          Users liked ability to{" "}
+                          <b>quickly understand the key points</b> of a lengthy
+                          article (over 500 words).
+                        </li>
+                        <li className="mb-2">
+                          Some users expressed preference for{" "}
+                          <b>TL;DR to be at top</b>
+                          of an article.
+                        </li>
+                        <li>
+                          <b>Potential iteration:</b> Skip to TL;DR button that
+                          allows users to jump to the bottom of the article
+                          where the TL;DR is.
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="md:w-1/2 flex justify-center">
+                      <img
+                        src="/src/assets/wapo/tldr.png"
+                        className="w-1/2 self-center"
+                        style={{ maxHeight: 300, width: "auto" }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col md:flex-row mt-6">
+                    <div className="md:w-1/2">
+                      <h3 className="text-xl font-bold mb-2">US Map</h3>
+                      <ul className="list-disc pl-5 leading-relaxed">
+                        <li className="mb-2">
+                          76% of interviewees would use this feature.
+                        </li>
+                        <li className="mb-2">
+                          “I like the interactive aspect of the map, but I would
+                          only want to see news and election updates for my
+                          state or national headlines.”
+                        </li>
+                        <li className="mb-2">
+                          Users generally liked this feature, but are more
+                          interested local news
+                        </li>
+                        <li>
+                          Potential iteration: Showing “hot spots” for national
+                          headlines/swing state election news. Allow users to
+                          zoom in quickly to their state/county for access to
+                          information about local elections and politics.
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="md:w-1/2 flex justify-center">
+                      <img
+                        src="/src/assets/wapo/map.gif"
+                        className="w-1/2 self-center"
+                        style={{ maxHeight: 300, width: "auto" }}
+                      />
+                    </div>
+                  </div>
+
+                  <h2 className="text-2xl font-bold mb-2 mt-8">
+                    Success Metrics
+                  </h2>
+                  <ul className="list-disc pl-5">
+                    <li>Number of swipes and articles viewed</li>
+                    <li>Time spent on app</li>
+                    <li>% of time spent on Good News vs regular news</li>
+                    <li>
+                      Number of users that opted to select onboarding
+                      preferences
+                    </li>
+                    <li>Average # of topics selected</li>
+                    <li>Number of users that submitted quizzes</li>
+                    <li>Average daily streak</li>
+                    <li>% of articles read by average length</li>
+                  </ul>
                 </div>
               )}
             </>
