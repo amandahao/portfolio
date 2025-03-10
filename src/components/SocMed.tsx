@@ -11,7 +11,7 @@ export default function SocMed() {
       <div style={socmed}>
         <a href="https://www.linkedin.com/in/amandahao/">
           <img
-            src="/src/assets/linkedin.png"
+            src="/src/assets/linkedin-white.png"
             alt="linkedin"
             width="35"
             height="35"
@@ -19,12 +19,17 @@ export default function SocMed() {
         </a>
       </div>
       <div style={socmed}>
-        <img src="/src/assets/resume.png" alt="resume" width="35" height="35" />
+        <img
+          src="/src/assets/resume-white.png"
+          alt="resume"
+          width="35"
+          height="35"
+        />
       </div>
       <div style={{ ...socmed, marginRight: "0px" }}>
         <a href="mailto:amandahao@gmail.com">
           <img
-            src="/src/assets/email.png"
+            src="/src/assets/email-white.png"
             alt="resume"
             width="35"
             height="35"

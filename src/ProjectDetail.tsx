@@ -120,7 +120,7 @@ const ProjectDetail: React.FC = () => {
       timeline: "",
       team: [],
       tags: ["Figma", "Prototyping", "UX Design"],
-      headerImage: "/src/assets/venmo/venmoe-hero.png",
+      headerImage: "/src/assets/venmo/venmo-hero.png",
       problem:
         "Many Venmo users, especially college students, struggle to manage their finances effectively when using the app. This often leads to overspending and difficulty tracking expenses, impacting their financial well-being and user satisfaction.",
       approach:
@@ -841,23 +841,13 @@ const ProjectDetail: React.FC = () => {
                     </li>
                   </ul>
 
-                  <div className="grid grid-cols-3 gap-2 mb-8">
-                    <img
-                      src="/src/assets/venmo/screens1.png"
-                      alt="Venmo budgeting screens"
-                      className="rounded-md"
-                    />
-                    <img
-                      src="/src/assets/venmo/screens2.png"
-                      alt="Venmo budgeting screens"
-                      className="rounded-md"
-                    />
-                    <img
-                      src="/src/assets/venmo/screens3.png"
-                      alt="Venmo budgeting screens"
-                      className="rounded-md"
-                    />
-                  </div>
+                  <iframe
+                    style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }}
+                    width="100%"
+                    height="700"
+                    src="https://embed.figma.com/proto/bAhPB9tX3Sqxpjux6XatNA/venmo-budget?page-id=0%3A1&node-id=2-4&m=dev&scaling=scale-down&content-scaling=fixed&embed-host=share&footer=false"
+                    allowFullScreen
+                  ></iframe>
                 </div>
               )}
 

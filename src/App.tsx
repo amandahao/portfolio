@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <SplineScene />
-      <div className="app">
+      <div className="app h-screen flex items-center justify-center">
         <main>
           <span className="caption" style={{ color: "#ffffffc9" }}>
             Hi, I'm{" "}
