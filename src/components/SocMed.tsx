@@ -21,7 +21,7 @@ export default function SocMed() {
       <div style={socmed}>
         <a
           target="_blank"
-          href="https://drive.google.com/file/d/1IySIHm8MfS021QnPjOGs7pbmFawubafH/view?usp=sharing"
+          href="https://drive.google.com/file/d/19tS3c588qctxt9hZhyGAbi0UnXnh1MDl/view?usp=sharing"
         >
           <img
             src="/assets/resume-white.png"

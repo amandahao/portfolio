@@ -8,7 +8,7 @@ function App() {
       <SplineScene />
       <div
         className="app h-screen flex items-center justify-center"
-        // style={{ pointerEvents: "none" }}
+        style={{ pointerEvents: "none" }}
       >
         <main>
           <span className="caption" style={{ color: "#ffffffc9" }}>
@@ -31,12 +31,12 @@ function App() {
           </span>
           <span
             className="desc"
-            style={{ color: "#ffffffcc", padding: "60px 0px 0px 0px" }}
+            style={{ color: "#ffffffcc", padding: "50px 0px 0px 0px" }}
           >
             Click on the computer to check out my work, or hover over <br />
             other components to learn more about me!
           </span>
-          <div style={{ padding: "25px 0px 0px 0px" }}>
+          <div style={{ padding: "25px 0px 0px 0px", pointerEvents: "all" }}>
             <SocMed />
           </div>
         </main>

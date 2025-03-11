@@ -31,7 +31,7 @@ export default function Footer({ theme = "light" }: FooterProps) {
         <div style={socmed}>
           <a
             target="_blank"
-            href="https://drive.google.com/file/d/1IySIHm8MfS021QnPjOGs7pbmFawubafH/view?usp=drive_link"
+            href="https://drive.google.com/file/d/19tS3c588qctxt9hZhyGAbi0UnXnh1MDl/view?usp=sharing"
           >
             <img
               src={getImageSrc("resume")}
