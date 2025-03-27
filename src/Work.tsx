@@ -46,7 +46,7 @@ const ProjectCard: React.FC<ProjectData & { onClick: () => void }> = ({
 }) => {
   return (
     <div
-      className="rounded-3xl shadow-lg overflow-hidden mb-8 text-black"
+      className="rounded-3xl shadow-lg overflow-hidden mb-8 text-black cursor-pointer hover:scale-101 transition-transform duration-500"
       style={{
         backgroundColor: "#F3F3F3",
         boxShadow: "0px 0px 53.5px 24px rgba(255, 255, 255, 0.25)",
