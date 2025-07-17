@@ -1,48 +1,35 @@
-import "./App.css";
-import SplineScene from "./components/SplineScene";
-import SocMed from "./components/SocMed";
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
 
 function App() {
+  const [count, setCount] = useState(0)
+
   return (
     <>
-      <SplineScene />
-      <div
-        className="app h-screen flex items-center justify-center"
-        style={{ pointerEvents: "none" }}
-      >
-        <main>
-          <span className="caption" style={{ color: "#ffffffc9" }}>
-            Hi, I'm{" "}
-            <span
-              style={{
-                color: "#ffffff",
-              }}
-            >
-              Amanda.
-            </span>
-          </span>
-          <span
-            className="sub-caption"
-            style={{
-              color: "#ffffffe6",
-            }}
-          >
-            Science, Tech, & Intl Affairs @ Georgetown
-          </span>
-          <span
-            className="desc"
-            style={{ color: "#ffffffcc", padding: "50px 0px 0px 0px" }}
-          >
-            Click on the computer to check out my work, or hover over <br />
-            other components to learn more about me!
-          </span>
-          <div style={{ padding: "25px 0px 0px 0px", pointerEvents: "all" }}>
-            <SocMed />
-          </div>
-        </main>
+      <div>
+        <a href="https://vite.dev" target="_blank">
+          <img src={viteLogo} className="logo" alt="Vite logo" />
+        </a>
+        <a href="https://react.dev" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
       </div>
+      <h1>Vite + React</h1>
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <p>
+          Edit <code>src/App.tsx</code> and save to test HMR
+        </p>
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
