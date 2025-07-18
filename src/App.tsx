@@ -6,11 +6,12 @@ import { WorkExp } from "./WorkExp";
 // import line8 from "./line-8.svg";
 // import line9 from "./line-9.svg";
 // import socmed from "./socmed.svg";
+import SocMed from "./SocMed";
 import "./style.css";
-// import vector1 from "./vector-1.svg";
 // import vector22 from "./vector-2-2.svg";
 // import vector3 from "./vector-3.svg";
 // import vector4 from "./vector-4.svg";
+// import test from "../public/test.svg";
 
 export default function App() {
   return (
@@ -19,11 +20,11 @@ export default function App() {
         <div className="overlap-2">
           <div className="bkgd">
             <div className="overlap-group-2">
-              {/* <img className="vector-4" alt="Vector" src={vector1} /> */}
+              <img className="vector-4" alt="Vector" src="Vector 1.svg" />
 
-              <div className="ellipse-5" />
+              <img className="ellipse-5" src="Ellipse 3.svg" />
 
-              {/* <img className="vector-5" alt="Vector" src={vector22} /> */}
+              <img className="vector-5" alt="Vector" src="Vector 2.svg" />
 
               <div className="rectangle" />
             </div>
@@ -33,7 +34,9 @@ export default function App() {
             © 2025 Amanda Hao. All rights reserved.
           </p>
 
-          <p className="text-wrapper-5">thank you for visiting my portfolio</p>
+          <p className="text-wrapper-5">
+            thank you for visiting my portfolio :)
+          </p>
 
           <div className="ah-frame">
             <div className="frame-3">
@@ -111,9 +114,10 @@ export default function App() {
             </div>
           </div>
 
-          {/* <img className="socmed" alt="Socmed" src={socmed} />
+          {/* <img className="socmed" alt="Socmed" src={socmed} /> */}
+          <SocMed />
 
-          <img className="connector" alt="Connector" src={connector} />
+          {/* <img className="connector" alt="Connector" src={connector} />
 
           <img className="line-4" alt="Line" src={line2} />
 
@@ -127,16 +131,16 @@ export default function App() {
             <div className="hi-i-m-amanda-a-wrapper">
               <p className="hi-i-m-amanda-a">
                 <span className="span">
-                  Hi! I’m Amanda, a Georgetown student pursuing a B.S. in
+                  Hi! I'm Amanda, a Georgetown student pursuing a B.S. in
                   Science, Technology &amp; International Affairs and an M.S. in
                   Data Science &amp; Analytics. Across my work experiences and
-                  personal projects, I’ve worn whatever hat the moment called
+                  personal projects, I've worn whatever hat the moment called
                   for—PM, developer, data analyst, or designer—to move ideas
                   forward.{" "}
                 </span>
 
                 <span className="text-wrapper-9">
-                  I’m passionate about tech and people, and I love creating
+                  I'm passionate about tech and people, and I love creating
                   innovative solutions that deliver real impact.
                 </span>
               </p>

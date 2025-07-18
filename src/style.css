@@ -43,18 +43,18 @@
 }
 
 .longer-version .ellipse-5 {
-  background: linear-gradient(
+  /* background: linear-gradient(
     99deg,
     rgba(217, 217, 217, 1) 0%,
     rgba(66, 66, 66, 1) 100%
   );
-  border-radius: 336.46px / 42.62px;
-  height: 85px;
+  border-radius: 336.46px / 42.62px; */
+  /* height: 85px; */
   left: 1308px;
   position: absolute;
-  top: 497px;
-  transform: rotate(-43.91deg);
-  width: 673px;
+  top: 197px;
+  /* transform: rotate(-43.91deg); */
+  /* width: 673px; */
 }
 
 .longer-version .vector-5 {
