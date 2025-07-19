@@ -1,35 +1,45 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import Header from "./components/Header";
+import DotGrid from "./components/DotGrid";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      {/* <Header />
+      <div className="absolute inset-0">
+        <DotGrid
+          dotSize={10}
+          gap={15}
+          baseColor="#888888"
+          activeColor="#ffffff"
+          proximity={100}
+          shockRadius={200}
+          shockStrength={6}
+          resistance={700}
+          returnDuration={1.2}
+        />
+      </div> */}
+      <div className="h-screen w-full flex flex-col overflow-hidden">
+        <div className="h-[130px] shrink-0">
+          <Header />
+        </div>
+
+        <div className="flex-grow relative min-h-0">
+          <DotGrid
+            dotSize={10}
+            gap={15}
+            baseColor="#888888"
+            activeColor="#ffffff"
+            proximity={120}
+            shockRadius={250}
+            shockStrength={5}
+            resistance={750}
+            returnDuration={1.5}
+          />
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
