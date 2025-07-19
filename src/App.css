@@ -1,99 +1,42 @@
-@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap");
-@import "tailwindcss";
-
-.app main {
-  position: relative;
-  flex: 1;
-  /* first 120px, figure out positioning later */
-  /* padding: 20% 0px 20px 130px;  */
-  padding: 0px 0px 0px 10%;
-  width: 60%;
-  display: flex;
-  flex-direction: column;
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
 }
 
-.caption {
-  position: relative;
-  font-size: 66px;
-  font-family: "Pixelify Sans", sans-serif;
-  font-weight: 400;
-  color: "#ffffffc9";
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
 
-  span {
-    color: "#ffffff";
-    font-weight: 700;
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 
-.sub-caption {
-  font-size: 22px;
-  font-family: "Reddit Sans", sans-serif;
-  font-weight: 700;
-  color: "#ffffffe6";
-  line-height: 0px; /* moves it up */
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
 }
 
-.desc {
-  font-size: 16px;
-  font-family: "Reddit Sans", sans-serif;
-  font-weight: 500;
+.card {
+  padding: 2em;
 }
 
-.background {
-  background: linear-gradient(180deg, #040719 0%, #04064b 50%, #8f3e6b 99.99%);
-}
-
-.title {
-  font-size: 66px;
-  font-family: "Pixelify Sans", sans-serif;
-  font-weight: 400;
-  color: "#ffffff";
-  padding: 30px 0px 40px 0px;
-}
-
-.text {
-  color: rgba(255, 255, 255, 0.9);
-  font-family: "Reddit Sans";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  padding-bottom: 30px;
-}
-
-.text a {
-  text-decoration: none;
-}
-
-.project-title {
-  color: #000;
-  font-family: "Reddit Sans";
-  font-size: 25px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-}
-
-.project-desc {
-  font-size: 14px;
-  font-family: "Reddit Sans", sans-serif;
-  font-weight: 400;
-}
-
-.tab {
-  color: rgba(255, 255, 255, 0.8);
-  font-family: "Reddit Sans";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-}
-
-.active-tab {
-  color: #fff;
-  font-weight: 700;
-}
-
-.p-wrapper {
-  line-height: normal;
+.read-the-docs {
+  color: #888;
 }
