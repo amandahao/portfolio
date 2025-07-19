@@ -1,4 +1,3 @@
-import React from "react";
 import SocMed from "./SocMed";
 
 const Header = () => {

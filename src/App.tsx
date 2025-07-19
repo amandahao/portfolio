@@ -24,7 +24,7 @@ function App() {
           <Header />
         </div>
 
-        <div className="flex-grow relative min-h-0">
+        <div className="flex-grow relative min-h-0 p-6">
           <DotGrid
             dotSize={10}
             gap={15}
