@@ -1,12 +1,30 @@
 @import "tailwindcss";
 
-/* @theme {
-  --color-dark-black: "#1b1b1b";
-} */
+@font-face {
+  font-family: "SF Pro";
+  src: local("SF Pro"), url(./fonts/SFProText-Regular.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF Pro";
+  src: local("SF Pro"), url(./fonts/SFProText-Medium.woff2) format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF Pro";
+  src: local("SF Pro"), url(./fonts/SFProText-Bold.woff2) format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
 
 body {
   background-color: "#1b1b1b";
   color: "#ffffff";
-  font-family: "SF Pro", Helvetica, Arial, sans-serif;
+  font-family: "SF Pro", -apple-system, BlinkMacSystemFont, Helvetica, Arial,
+    sans-serif;
   font-size: 32px;
 }

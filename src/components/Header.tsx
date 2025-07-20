@@ -5,7 +5,6 @@ const Header = () => {
     <header className="relative z-10 w-screen px-4 sm:px-8 py-12 overflow-x-hidden">
       <div className="w-full h-full max-w-none">
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-8 lg:gap-12 h-full w-full">
-          {/* Column 1 - Intro */}
           <div className="flex-shrink-0">
             <div className="space-y-2">
               <p
@@ -23,8 +22,7 @@ const Header = () => {
             </div>
           </div>
 
-          {/* Column 2 - Currently at Tesla */}
-          <div className="flex-shrink-0 flex flex-col items-start lg:items-center justify-start lg:text-center">
+          <div className="flex-shrink-0 flex flex-col items-start justify-start">
             <div className="space-y-2">
               <p
                 className="font-medium text-white"
@@ -36,7 +34,6 @@ const Header = () => {
             </div>
           </div>
 
-          {/* Column 3 - Navigation Menu */}
           <div className="flex-shrink-0 flex flex-col justify-start">
             <nav className="flex flex-row lg:flex-col">
               <a
@@ -63,7 +60,6 @@ const Header = () => {
             </nav>
           </div>
 
-          {/* Column 4 - Social Media */}
           <div className="flex-shrink-0 flex justify-start lg:justify-end">
             <SocMed />
           </div>
