@@ -20,7 +20,7 @@ function App() {
         />
       </div> */}
       <div className="h-screen w-full flex flex-col overflow-hidden">
-        <div className="h-[130px] shrink-0">
+        <div className="h-[140px] shrink-0">
           <Header />
         </div>
 

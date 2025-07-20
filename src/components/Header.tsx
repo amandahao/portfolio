@@ -12,11 +12,11 @@ const Header = () => {
                 style={{ fontSize: "28px", lineHeight: "1.1" }}
                 className="font-medium text-white"
               >
-                Hi, I'm Amanda.
+                <a href="/#">Hi, I'm Amanda.</a>
               </p>
               <p
                 style={{ fontSize: "28px", lineHeight: "1.1" }}
-                className="font-medium text-gray-400"
+                className="font-medium text-[#797979]"
               >
                 I'm a people-first builder <br /> & problem solver.
               </p>
@@ -40,23 +40,23 @@ const Header = () => {
           <div className="flex-shrink-0 flex flex-col justify-start">
             <nav className="flex flex-row lg:flex-col">
               <a
-                href="#about"
+                href="/about"
                 style={{ fontSize: "28px", lineHeight: "1.1" }}
-                className="font-medium text-white hover:text-gray-400 transition-colors duration-300 ease-out"
+                className="font-medium text-white hover:text-[#797979] transition-colors duration-300 ease-out"
               >
                 About
               </a>
               <a
-                href="#work"
+                href="/work"
                 style={{ fontSize: "28px", lineHeight: "1.1" }}
-                className="font-medium text-white hover:text-gray-400 transition-colors duration-300 ease-out"
+                className="font-medium text-white hover:text-[#797979] transition-colors duration-300 ease-out"
               >
                 Work
               </a>
               <a
-                href="#projects"
+                href="/projects"
                 style={{ fontSize: "28px", lineHeight: "1.1" }}
-                className="font-medium text-white hover:text-gray-400 transition-colors duration-300 ease-out"
+                className="font-medium text-white hover:text-[#797979] transition-colors duration-300 ease-out"
               >
                 Projects
               </a>
