@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./components/Header";
+import { useNavigate } from "react-router-dom";
 
 interface Project {
   id: string;
@@ -7,10 +8,8 @@ interface Project {
   title: string;
   description: string;
   image: string;
-  slug: string; // for routing to individual project pages
 }
 
-// Project data - easy to add new projects here
 const projects: Project[] = [
   {
     id: "washington-post",
@@ -18,7 +17,6 @@ const projects: Project[] = [
     title: "The Washington Post",
     description: "Mobile features to engage Gen Z readers during 2024 election",
     image: "/projects/wapo-proj.png",
-    slug: "washington-post",
   },
   {
     id: "venmo",
@@ -27,7 +25,6 @@ const projects: Project[] = [
     description:
       "Budgeting feature to set limits, categorize transactions, etc.",
     image: "/projects/venmo.png",
-    slug: "venmo",
   },
 ];
 
@@ -38,14 +35,12 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
   return (
-    <div>
-      {/*
-        <div
+    // <div>
+
+    <div
       className="group cursor-pointer transition-all duration-300 hover:transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-black/20"
       onClick={onClick}
     >
-        */}
-
       <div className="mb-8">
         <p
           className="font-medium text-white"
@@ -80,14 +75,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
 };
 
 const Projects: React.FC = () => {
-  const handleProjectClick = (project: Project) => {
-    // Navigate to individual project page
-    // Example with React Router: navigate(`/projects/${project.slug}`);
-    // Example with Next.js: router.push(`/projects/${project.slug}`);
+  const navigate = useNavigate();
+
+  const handleProjectClick = (projectId: string) => {
+    navigate(`/projects/${projectId}`);
   };
 
   return (
-    <div className="min-h-screen w-full flex flex-col bg-black">
+    <div className="min-h-screen w-full flex flex-col">
       <div className="z-10">
         <Header />
       </div>
@@ -105,7 +100,7 @@ const Projects: React.FC = () => {
               >
                 <ProjectCard
                   project={project}
-                  onClick={() => handleProjectClick(project)}
+                  onClick={() => handleProjectClick(project.id)}
                 />
               </div>
             ))}

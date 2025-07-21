@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AboutPage from "./About.tsx";
 import WorkPage from "./Work.tsx";
 import ProjectPage from "./Project.tsx";
+import ProjectDetail from "./ProjectDetail.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -15,7 +16,7 @@ createRoot(document.getElementById("root")!).render(
         <Route path="/about" element={<AboutPage />} />
         <Route path="/work" element={<WorkPage />} />
         <Route path="/projects" element={<ProjectPage />} />
-        {/*<Route path="/work/:projectId" element={<ProjectDetail />} /> */}
+        <Route path="/projects/:projectId" element={<ProjectDetail />} />
       </Routes>
     </Router>
   </StrictMode>
