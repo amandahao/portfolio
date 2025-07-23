@@ -301,30 +301,71 @@ const ProjectDetail: React.FC = () => {
               </p>
 
               {project.id === "washington-post" && (
-                <div className="grid md:grid-cols-3 gap-6 text-sm">
-                  <div>
-                    <h4 className="font-semibold text-blue-400 mb-2">Time</h4>
-                    <p className="text-gray-400">
-                      15min/day average news consumption; prefer skimmable
-                      content
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-blue-400 mb-2">
-                      Personalization
-                    </h4>
-                    <p className="text-gray-400">
-                      Social feeds have raised expectations for tailored content
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-blue-400 mb-2">
-                      Engagement
-                    </h4>
-                    <p className="text-gray-400">
-                      Gen Z seeks interactivity, not passive reading
-                    </p>
-                  </div>
+                <div className="overflow-x-auto my-8">
+                  <table className="w-full">
+                    <thead>
+                      <tr>
+                        <th
+                          className="text-left pb-3 font-medium text-[#797979]"
+                          style={{ fontSize: "20px", lineHeight: "1.1" }}
+                        >
+                          Focus Area
+                        </th>
+                        <th
+                          className="text-left pb-3 font-medium text-[#797979]"
+                          style={{ fontSize: "20px", lineHeight: "1.1" }}
+                        >
+                          Why It Matters for Gen Z
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td
+                          className="font-medium text-white"
+                          style={{ fontSize: "20px", lineHeight: "1.1" }}
+                        >
+                          Time
+                        </td>
+                        <td
+                          className="font-medium text-white"
+                          style={{ fontSize: "20px", lineHeight: "1.1" }}
+                        >
+                          15min/day average news consumption; prefer skimmable
+                          content
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          className="font-medium text-white"
+                          style={{ fontSize: "20px", lineHeight: "1.1" }}
+                        >
+                          Personalization
+                        </td>
+                        <td
+                          className="font-medium text-white"
+                          style={{ fontSize: "20px", lineHeight: "1.1" }}
+                        >
+                          Social feeds have raised expectations for tailored
+                          content
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          className="font-medium text-white"
+                          style={{ fontSize: "20px", lineHeight: "1.1" }}
+                        >
+                          Engagement
+                        </td>
+                        <td
+                          className="font-medium text-white"
+                          style={{ fontSize: "20px", lineHeight: "1.1" }}
+                        >
+                          Gen Z seeks interactivity, not passive reading
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               )}
               <p
@@ -375,9 +416,9 @@ const ProjectDetail: React.FC = () => {
               Key Product Decisions & Features
             </p>
 
-            <div className="grid md:grid-cols-2 gap-12">
+            <div className="grid md:grid-cols-[320px_1fr] mt-4">
               {project.mockupImage && (
-                <div className="w-96 mb-8 rounded-xl overflow-hidden">
+                <div className="w-96 mb-8 rounded-[50px] overflow-hidden">
                   <img
                     src={project.mockupImage}
                     alt={`${project.title} mockup`}
@@ -386,7 +427,7 @@ const ProjectDetail: React.FC = () => {
                 </div>
               )}
 
-              <div className="space-y-8">
+              <div className="space-y-8 mt-12">
                 {project.features.map((feature, index) => (
                   <div key={index}>
                     <p
@@ -437,17 +478,91 @@ const ProjectDetail: React.FC = () => {
               >
                 User Journey Roadmap
               </p>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap items-center gap-3 mt-4">
                 {project.userJourney.map((step, index) => (
                   <div key={index} className="flex items-center">
-                    <div className="bg-gray-800 rounded-lg px-4 py-3 text-center min-w-[200px]">
-                      <p className="text-sm text-gray-300">{step.step}</p>
+                    <div className="bg-white border border-gray-300 rounded-xl px-6 py-4 text-center min-h-[72px] min-w-[140px] max-w-[200px] shadow-sm flex items-center justify-center">
+                      <p
+                        className="font-medium text-[#797979]"
+                        style={{ fontSize: "14px", lineHeight: "1.1" }}
+                      >
+                        {step.step}
+                      </p>
                     </div>
                     {index < project.userJourney!.length - 1 && (
-                      <div className="mx-2 text-gray-500">→</div>
+                      <div className="mx-3 text-gray-400 text-lg font-bold">
+                        →
+                      </div>
                     )}
                   </div>
                 ))}
+              </div>
+            </div>
+          )}
+
+          {project.id === "washington-post" && (
+            <div className="mb-16">
+              <p
+                className="font-medium text-[#797979]"
+                style={{ fontSize: "28px", lineHeight: "1.1" }}
+              >
+                Monetization Strategy
+              </p>
+              <p
+                className="font-medium text-white"
+                style={{ fontSize: "28px", lineHeight: "1.1" }}
+              >
+                We proposed a freemium model:
+              </p>
+              <div className="overflow-x-auto my-8">
+                <table className="w-full">
+                  <thead>
+                    <tr>
+                      <th
+                        className="text-left pb-3 font-medium text-[#797979]"
+                        style={{ fontSize: "20px", lineHeight: "1.1" }}
+                      >
+                        Tier
+                      </th>
+                      <th
+                        className="text-left pb-3 font-medium text-[#797979]"
+                        style={{ fontSize: "20px", lineHeight: "1.1" }}
+                      >
+                        Feature
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td
+                        className="font-medium text-white"
+                        style={{ fontSize: "20px", lineHeight: "1.1" }}
+                      >
+                        Free
+                      </td>
+                      <td
+                        className="font-medium text-white"
+                        style={{ fontSize: "20px", lineHeight: "1.1" }}
+                      >
+                        10 cards/day, 10 articles/month, ads
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        className="font-medium text-white"
+                        style={{ fontSize: "20px", lineHeight: "1.1" }}
+                      >
+                        Premium
+                      </td>
+                      <td
+                        className="font-medium text-white"
+                        style={{ fontSize: "20px", lineHeight: "1.1" }}
+                      >
+                        Unlimited cards + articles, fewer ads
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           )}
