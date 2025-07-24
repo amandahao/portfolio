@@ -699,13 +699,23 @@ const ProjectDetail: React.FC = () => {
               >
                 Success Metrics
               </p>
-              <div className="grid md:grid-cols-2 gap-4">
-                {project.metrics.map((metric, index) => (
-                  <div key={index} className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0" />
-                    <p className="text-gray-300">{metric}</p>
-                  </div>
-                ))}
+              <div className="space-y-3">
+                <ul
+                  className="font-medium text-white"
+                  style={{ fontSize: "28px", lineHeight: "1.1" }}
+                >
+                  {project.metrics.map((metric, index) => (
+                    <li key={index} className="flex items-start gap-2">
+                      <p
+                        className="font-medium text-white"
+                        style={{ fontSize: "28px", lineHeight: "1.1" }}
+                      >
+                        •
+                      </p>
+                      {metric}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           )}
