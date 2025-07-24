@@ -250,6 +250,9 @@ const ProjectDetail: React.FC = () => {
             </div>
           </div>
 
+          {/* Divider Line */}
+          <div className="h-[2px] bg-[#797979]/30 mb-16" />
+
           {/* Problem & Goal */}
           <div className="grid md:grid-cols-2 gap-12 mb-16">
             <div>
@@ -515,11 +518,11 @@ const ProjectDetail: React.FC = () => {
                 We proposed a freemium model:
               </p>
               <div className="overflow-x-auto my-8">
-                <table className="w-full">
+                <table className=" table-fixed max-w-[1000px]">
                   <thead>
                     <tr>
                       <th
-                        className="text-left pb-3 font-medium text-[#797979]"
+                        className="text-left pb-3 font-medium text-[#797979] w-[250px]"
                         style={{ fontSize: "20px", lineHeight: "1.1" }}
                       >
                         Tier
@@ -559,6 +562,126 @@ const ProjectDetail: React.FC = () => {
                         style={{ fontSize: "20px", lineHeight: "1.1" }}
                       >
                         Unlimited cards + articles, fewer ads
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+
+          {/* KPIs & Impact */}
+          {project.id === "washington-post" && (
+            <div className="mb-16">
+              <p
+                className="font-medium text-[#797979]"
+                style={{ fontSize: "28px", lineHeight: "1.1" }}
+              >
+                KPIs & Impact
+              </p>
+              <div className="overflow-x-auto mb-8 mt-2">
+                <table className="w-full table-fixed max-w-[1000px]">
+                  <thead>
+                    <tr>
+                      <th
+                        className="text-left pb-3 font-medium text-[#797979] w-[250px]"
+                        style={{ fontSize: "20px", lineHeight: "1.1" }}
+                      >
+                        Experiment
+                      </th>
+                      <th
+                        className="text-left pb-3 font-medium text-[#797979] w-[300px]"
+                        style={{ fontSize: "20px", lineHeight: "1.1" }}
+                      >
+                        Metric
+                      </th>
+                      <th
+                        className="text-left pb-3 font-medium text-[#797979] w-[400px]"
+                        style={{ fontSize: "20px", lineHeight: "1.1" }}
+                      >
+                        Goal
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td
+                        className="font-medium text-white"
+                        style={{ fontSize: "20px", lineHeight: "1.1" }}
+                      >
+                        Cards
+                      </td>
+                      <td
+                        className="font-medium text-white"
+                        style={{ fontSize: "20px", lineHeight: "1.1" }}
+                      >
+                        Swipes/articles views
+                      </td>
+                      <td
+                        className="font-medium text-white"
+                        style={{ fontSize: "20px", lineHeight: "1.1" }}
+                      >
+                        ↑ engagement
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        className="font-medium text-white"
+                        style={{ fontSize: "20px", lineHeight: "1.1" }}
+                      >
+                        ERT
+                      </td>
+                      <td
+                        className="font-medium text-white"
+                        style={{ fontSize: "20px", lineHeight: "1.1" }}
+                      >
+                        Article clicks
+                      </td>
+                      <td
+                        className="font-medium text-white"
+                        style={{ fontSize: "20px", lineHeight: "1.1" }}
+                      >
+                        ↑ CTR (0.1% A/B test)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        className="font-medium text-white"
+                        style={{ fontSize: "20px", lineHeight: "1.1" }}
+                      >
+                        Quiz
+                      </td>
+                      <td
+                        className="font-medium text-white"
+                        style={{ fontSize: "20px", lineHeight: "1.1" }}
+                      >
+                        Daily streaks
+                      </td>
+                      <td
+                        className="font-medium text-white"
+                        style={{ fontSize: "20px", lineHeight: "1.1" }}
+                      >
+                        ↑ stickiness
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        className="font-medium text-white"
+                        style={{ fontSize: "20px", lineHeight: "1.1" }}
+                      >
+                        Good News
+                      </td>
+                      <td
+                        className="font-medium text-white"
+                        style={{ fontSize: "20px", lineHeight: "1.1" }}
+                      >
+                        Time spent in app
+                      </td>
+                      <td
+                        className="font-medium text-white"
+                        style={{ fontSize: "20px", lineHeight: "1.1" }}
+                      >
+                        ↓ fatigue, ↑ retention
                       </td>
                     </tr>
                   </tbody>

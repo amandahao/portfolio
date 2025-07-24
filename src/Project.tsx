@@ -38,7 +38,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
     // <div>
 
     <div
-      className="group cursor-pointer transition-all duration-300 hover:transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-black/20"
+      className="group cursor-pointer transition-all duration-300" // hover:transform hover:scale-[1.02]
       onClick={onClick}
     >
       <div className="mb-8">
