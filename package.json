@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@splinetool/react-spline": "^4.0.0",
+    "@splinetool/react-spline": "^4.1.0",
     "@splinetool/runtime": "^1.9.72",
     "@tailwindcss/vite": "^4.0.9",
     "react": "^19.0.0",
