@@ -190,7 +190,7 @@ const projectsData: ProjectData[] = [
 
 const ProjectDetail: React.FC = () => {
   const { projectId } = useParams<{ projectId: string }>();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const project = projectsData.find((p) => p.id === projectId);
 

@@ -95,7 +95,7 @@ const About: React.FC = () => {
           </div>
 
           {/* Music Section */}
-          <div className="pt-16 space-y-4">
+          {/* <div className="pt-16 space-y-4">
             <p
               style={{ fontSize: "28px", lineHeight: "1.1" }}
               className="font-medium text-[#797979]"
@@ -103,9 +103,8 @@ const About: React.FC = () => {
               I love listening to music (160k+ minutes/yearly)—check out what
               I'm listening to right now!
             </p>
-
-            {/* Spotify Widget */}
-          </div>
+            // add spotify widget
+          </div> */}
         </div>
       </div>
     </div>

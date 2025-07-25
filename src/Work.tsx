@@ -1,49 +1,62 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "./components/Header";
 
 interface WorkExperience {
+  link: string;
   id: string;
   company: string;
   role: string;
   duration: string;
   image: string;
+  industry: string;
 }
 
 const workExperiences: WorkExperience[] = [
   {
+    link: "https://tesla.com",
     id: "tesla",
     company: "Tesla",
     role: "Software Product Manager Intern",
     duration: "May'25-Aug'25",
     image: "/logos/tsla.png",
+    industry: "Supply Chain Optimization, Internal Applications",
   },
   {
+    link: "https://nba.com",
     id: "nba",
     company: "NBA",
     role: "Products, Tech & Ops Intern",
     duration: "Jun'24-Aug'24",
     image: "/logos/nba.jpg",
+    industry: "Consumer Experience, League Pass",
   },
   {
+    link: "https://washingtonpost.com",
     id: "washington-post",
     company: "The Washington Post",
     role: "Product Management Intern",
     duration: "Jan'24-May'24",
     image: "/logos/wp.png",
+    industry: "Monetization, Subscriptions",
   },
   {
+    link: "https://marriagepact.com",
     id: "marriage-pact",
     company: "Marriage Pact",
     role: "Product Launch Manager",
     duration: "Aug'24-May'25",
     image: "/logos/mp.jpg",
+    industry: "Annual Matchmaking Activity, $5M seed funding",
   },
   {
+    link: "https://mdi.georgetown.edu",
     id: "mdi",
     company: "Massive Data Institute",
     role: "Research Scholar",
     duration: "Aug'23-May'24",
     image: "/logos/mdi.jpg",
+    industry:
+      "Prof. Amy O'Hara, Compiling Data Sources to Inform Head Start Programs",
   },
 ];
 
@@ -51,6 +64,7 @@ const WorkCard: React.FC<{ experience: WorkExperience; index: number }> = ({
   experience,
   index,
 }) => {
+  const [isHovered, setIsHovered] = useState(false);
   return (
     <div
       className="flex items-center gap-4 py-4 hover:bg-gray-900/30 transition-colors duration-200 rounded-lg px-4"
@@ -59,11 +73,13 @@ const WorkCard: React.FC<{ experience: WorkExperience; index: number }> = ({
       }}
     >
       <div className="min-w-[60px] h-[60px]">
-        <img
-          src={experience.image}
-          alt={`${experience.company} logo`}
-          className="w-[60px] h-[60px] object-contain rounded-lg"
-        />
+        <a href={experience.link} target="_blank" rel="noopener noreferrer">
+          <img
+            src={experience.image}
+            alt={`${experience.company} logo`}
+            className="w-[60px] h-[60px] object-contain rounded-lg"
+          />
+        </a>
       </div>
 
       <div className="flex-1">
@@ -73,7 +89,14 @@ const WorkCard: React.FC<{ experience: WorkExperience; index: number }> = ({
               style={{ fontSize: "28px", lineHeight: "1.1" }}
               className="font-medium text-white underline"
             >
-              {experience.company}
+              <a
+                href={experience.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gray-300 transition-colors duration-300"
+              >
+                {experience.company}
+              </a>
             </p>
             <p
               style={{ fontSize: "28px", lineHeight: "1.1" }}
@@ -82,12 +105,28 @@ const WorkCard: React.FC<{ experience: WorkExperience; index: number }> = ({
               {experience.duration}
             </p>
           </div>
-          <p
+
+          <div
             style={{ fontSize: "28px", lineHeight: "1.1" }}
-            className="font-medium text-white"
+            className="font-medium text-white cursor-pointer relative overflow-hidden"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
           >
-            {experience.role}
-          </p>
+            <div
+              className={`transition-transform duration-300 ${
+                isHovered ? "-translate-y-full" : "translate-y-0"
+              }`}
+            >
+              {experience.role}
+            </div>
+            <div
+              className={`absolute top-0 left-0 transition-transform duration-300 ${
+                isHovered ? "translate-y-0" : "translate-y-full"
+              }`}
+            >
+              {experience.industry}
+            </div>
+          </div>
         </div>
       </div>
     </div>
