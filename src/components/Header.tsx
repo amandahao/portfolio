@@ -1,6 +1,10 @@
 import SocMed from "./SocMed";
+import { Link } from "react-router-dom";
 
 const Header = () => {
+  // const location = useLocation();
+  // const isActive = (path: string) => location.pathname === path;
+
   return (
     <header className="relative z-10 w-screen px-4 sm:px-8 py-12 overflow-x-hidden">
       <div className="w-full h-full max-w-none">
@@ -11,7 +15,7 @@ const Header = () => {
                 style={{ fontSize: "28px", lineHeight: "1.1" }}
                 className="font-medium text-white"
               >
-                <a href="/#">Hi, I'm Amanda.</a>
+                <Link to="/">Hi, I'm Amanda.</Link>
               </p>
               <p
                 style={{ fontSize: "28px", lineHeight: "1.1" }}
@@ -36,27 +40,27 @@ const Header = () => {
 
           <div className="flex-shrink-0 flex flex-col justify-start">
             <nav className="flex flex-row lg:flex-col">
-              <a
-                href="/about"
+              <Link
+                to="/about"
                 style={{ fontSize: "28px", lineHeight: "1.1" }}
                 className="font-medium text-white hover:text-[#797979] transition-colors duration-300 ease-out"
               >
                 About
-              </a>
-              <a
-                href="/work"
+              </Link>
+              <Link
+                to="/work"
                 style={{ fontSize: "28px", lineHeight: "1.1" }}
                 className="font-medium text-white hover:text-[#797979] transition-colors duration-300 ease-out"
               >
                 Work
-              </a>
-              <a
-                href="/projects"
+              </Link>
+              <Link
+                to="/projects"
                 style={{ fontSize: "28px", lineHeight: "1.1" }}
                 className="font-medium text-white hover:text-[#797979] transition-colors duration-300 ease-out"
               >
                 Projects
-              </a>
+              </Link>
             </nav>
           </div>
 

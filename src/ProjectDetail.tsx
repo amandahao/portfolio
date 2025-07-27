@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Header from "./components/Header";
 
 interface ProjectData {
@@ -112,7 +112,7 @@ const projectsData: ProjectData[] = [
     reflection:
       "This project taught me how to translate research into action, prioritize user needs in a critical election cycle, and drive alignment across product, design, and business stakeholders.",
     heroImage: "/projects/wapo-proj.png",
-    mockupImage: "/mockups/wapo.png",
+    mockupImage: "/mockups/wapo.gif",
   },
   {
     id: "venmo",
@@ -184,7 +184,7 @@ const projectsData: ProjectData[] = [
     reflection:
       "This feature was designed around the principle that financial empowerment should be passive, not punishing. By embedding budgeting where users already transact—and balancing automation and user control—we aim to nudge users toward smarter habits without overwhelming them.",
     heroImage: "/projects/venmo.png",
-    mockupImage: "/mockups/venmo.png",
+    mockupImage: "/mockups/venmo.gif",
   },
 ];
 

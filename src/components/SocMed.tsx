@@ -19,10 +19,7 @@ export default function SocMed() {
         </a>
       </div>
       <div style={socmed}>
-        <a
-          target="_blank"
-          href="https://drive.google.com/file/d/19tS3c588qctxt9hZhyGAbi0UnXnh1MDl/view?usp=sharing"
-        >
+        <a href="/Amanda_Hao_Resume.pdf" download>
           <img src="/icons/resume.svg" alt="resume" width="35" height="35" />
         </a>
       </div>

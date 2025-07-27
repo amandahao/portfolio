@@ -10,7 +10,7 @@ const About: React.FC = () => {
       </div>
 
       <div className="relative max-w-[60%] px-4 sm:px-8 pt-60 pb-24">
-        <div className="space-y-8">
+        <div className="space-y-8 animate-fade-in">
           <div className="space-y-6">
             <p
               style={{ fontSize: "28px", lineHeight: "1.1" }}
@@ -107,6 +107,23 @@ const About: React.FC = () => {
           </div> */}
         </div>
       </div>
+
+      <style>{`
+        @keyframes fade-in {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        
+        .animate-fade-in {
+          animation: fade-in 0.6s ease-out both;
+        }
+      `}</style>
     </div>
   );
 };
