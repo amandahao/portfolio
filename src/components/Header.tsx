@@ -11,16 +11,10 @@ const Header = () => {
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-8 lg:gap-12 h-full w-full">
           <div className="flex-shrink-0">
             <div className="space-y-2">
-              <p
-                style={{ fontSize: "28px", lineHeight: "1.1" }}
-                className="font-medium text-white"
-              >
+              <p className="font-medium text-white text-[28px] leading-[1.1]">
                 <Link to="/">Hi, I'm Amanda.</Link>
               </p>
-              <p
-                style={{ fontSize: "28px", lineHeight: "1.1" }}
-                className="font-medium text-[#797979]"
-              >
+              <p className="font-medium text-[#797979] text-[28px] leading-[1.1]">
                 I'm a people-first builder <br /> & problem solver.
               </p>
             </div>
@@ -28,10 +22,7 @@ const Header = () => {
 
           <div className="flex-shrink-0 flex flex-col items-start justify-start">
             <div className="space-y-2">
-              <p
-                className="font-medium text-white"
-                style={{ fontSize: "28px", lineHeight: "1.1" }}
-              >
+              <p className="font-medium text-white text-[28px] leading-[1.1]">
                 Currently a PM <br />
                 Intern @ Tesla
               </p>
@@ -42,22 +33,19 @@ const Header = () => {
             <nav className="flex flex-row lg:flex-col">
               <Link
                 to="/about"
-                style={{ fontSize: "28px", lineHeight: "1.1" }}
-                className="font-medium text-white hover:text-[#797979] transition-colors duration-300 ease-out"
+                className="font-medium text-[28px] leading-[1.1] text-white hover:text-[#797979] transition-colors duration-300 ease-out"
               >
                 About
               </Link>
               <Link
                 to="/work"
-                style={{ fontSize: "28px", lineHeight: "1.1" }}
-                className="font-medium text-white hover:text-[#797979] transition-colors duration-300 ease-out"
+                className="font-medium text-[28px] leading-[1.1] text-white hover:text-[#797979] transition-colors duration-300 ease-out"
               >
                 Work
               </Link>
               <Link
                 to="/projects"
-                style={{ fontSize: "28px", lineHeight: "1.1" }}
-                className="font-medium text-white hover:text-[#797979] transition-colors duration-300 ease-out"
+                className="font-medium text-[28px] leading-[1.1] text-white hover:text-[#797979] transition-colors duration-300 ease-out"
               >
                 Projects
               </Link>

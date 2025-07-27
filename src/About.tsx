@@ -12,10 +12,7 @@ const About: React.FC = () => {
       <div className="relative max-w-[60%] px-4 sm:px-8 pt-60 pb-24">
         <div className="space-y-8 animate-fade-in">
           <div className="space-y-6">
-            <p
-              style={{ fontSize: "28px", lineHeight: "1.1" }}
-              className="font-medium text-white"
-            >
+            <p className="font-medium text-white text-[28px] leading-[1.1]">
               Hi! I'm Amanda, a{" "}
               <a
                 href="https://georgetown.edu"
@@ -32,10 +29,7 @@ const About: React.FC = () => {
               ideas forward.
             </p>
 
-            <p
-              style={{ fontSize: "28px", lineHeight: "1.1" }}
-              className="font-medium text-white"
-            >
+            <p className="font-medium text-white text-[28px] leading-[1.1]">
               Currently, I'm a PM intern at{" "}
               <a
                 href="https://tesla.com"
@@ -76,10 +70,7 @@ const About: React.FC = () => {
               .
             </p>
 
-            <p
-              style={{ fontSize: "28px", lineHeight: "1.1" }}
-              className="font-medium text-white"
-            >
+            <p className="font-medium text-white text-[28px] leading-[1.1]">
               Beyond work, you'll find me playing volleyball, reading Murakami,
               curating playlists, or{" "}
               <a
@@ -96,10 +87,7 @@ const About: React.FC = () => {
 
           {/* Music Section */}
           {/* <div className="pt-16 space-y-4">
-            <p
-              style={{ fontSize: "28px", lineHeight: "1.1" }}
-              className="font-medium text-[#797979]"
-            >
+            <p className="font-medium text-[#797979] text-[28px] leading-[1.1]">
               I love listening to music (160k+ minutes/yearly)—check out what
               I'm listening to right now!
             </p>

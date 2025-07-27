@@ -85,10 +85,7 @@ const WorkCard: React.FC<{ experience: WorkExperience; index: number }> = ({
       <div className="flex-1">
         <div className="flex flex-col gap-1">
           <div className="flex items-center gap-3 flex-wrap">
-            <p
-              style={{ fontSize: "28px", lineHeight: "1.1" }}
-              className="font-medium text-white underline"
-            >
+            <p className="font-medium text-white text-[28px] leading-[1.1] underline">
               <a
                 href={experience.link}
                 target="_blank"
@@ -98,17 +95,13 @@ const WorkCard: React.FC<{ experience: WorkExperience; index: number }> = ({
                 {experience.company}
               </a>
             </p>
-            <p
-              style={{ fontSize: "28px", lineHeight: "1.1" }}
-              className="font-medium text-[#797979]"
-            >
+            <p className="font-medium text-white text-[28px] leading-[1.1]">
               {experience.duration}
             </p>
           </div>
 
           <div
-            style={{ fontSize: "28px", lineHeight: "1.1" }}
-            className="font-medium text-white cursor-pointer relative overflow-hidden"
+            className="font-medium text-white text-[28px] leading-[1.1] cursor-pointer relative overflow-hidden"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >

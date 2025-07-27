@@ -42,15 +42,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
       onClick={onClick}
     >
       <div className="mb-8">
-        <p
-          className="font-medium text-white"
-          style={{ fontSize: "28px", lineHeight: "1.1" }}
-        >
-          {/* <p className="text-2xl sm:text-3xl font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300"> */}
+        <p className="font-medium text-white text-[28px] leading-[1.1]">
           {project.title}
         </p>
-        <p className="font-medium text-[#797979]" style={{ fontSize: "18px" }}>
-          {/* <p className="text-gray-400 text-lg mb-6 leading-relaxed"> */}
+        <p className="font-medium text-[#797979] text-[18px]">
           {project.description}
         </p>
 
